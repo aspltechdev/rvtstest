@@ -1,0 +1,49 @@
+import Hero from "@/components/Hero";
+// import Vision from "@/components/Vision";
+import About from "@/components/About";     
+import ProductShowcase from "@/components/ProductShowcase";
+import Services from "@/components/Services";
+import Partners from "@/components/Partners";
+import Industries from "@/components/Industries";
+import ConceptToCustomer from "@/components/ConceptToCustomer";
+import GetOurSupport from "@/components/GetOurSupport";
+import WhyChoose from "@/components/WhyChoose"; 
+import ThreeDProduct from "@/components/ThreeDProduct";
+
+// Helper to fetch products
+async function getProducts() {
+    try {
+        const res = await fetch('http://localhost:3002/api/products', { cache: 'no-store' });
+        if (!res.ok) return [];
+        return res.json();
+    } catch (error) {
+        console.error("Failed to fetch products:", error);
+        return [];
+    }
+}
+
+export default async function Home() {
+    const products = await getProducts();
+    const latestProducts = products.map((p) => ({
+        name: p.title || p.name,
+        image: p.images && p.images.length > 0 ? p.images[0] : undefined,
+        slug: p.slug,
+        category: p.category
+    }));
+
+    return (
+        <main className="bg-black min-h-screen w-full overflow-x-hidden selection:bg-brand-red selection:text-white">
+            <Hero />
+            {/* <Vision /> */}
+            <About />  
+            <ThreeDProduct />      
+            <ProductShowcase />
+            <Services />
+            <ConceptToCustomer />
+             <WhyChoose />
+            <Industries />
+            <Partners />
+            <GetOurSupport />
+        </main>
+    );
+}
