@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const partners = [
     { name: "LG", logo: "/assets/LG-Logo.webp" },
     { name: "SONY", logo: "/assets/sony-removebg-preview.png" },
-    { name: "Trueview", logo: "/assets/trueview-removebg-preview.png" },
+
     { name: "AET", logo: "/assets/AET-removebg-preview.png" },
     { name: "SAMSUNG", logo: "/assets/samsung-removebg-preview.png" },
     { name: "TANNOY", logo: "/assets/Tannoy-removebg-preview.png" },
@@ -111,7 +111,7 @@ export default function Partners() {
                                                         src={partner.logo} 
                                                         alt={partner.name} 
                                                         fill 
-                                                        className={`object-contain transition-all duration-500 ${isCenter ? 'brightness-100 contrast-110 saturate-100' : 'grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100'}`} 
+                                                        className={`object-contain transition-all duration-500 brightness-100 contrast-110 saturate-100`} 
                                                     />
                                                 </div>
                                             ) : (

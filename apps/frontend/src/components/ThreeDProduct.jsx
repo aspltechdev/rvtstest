@@ -63,7 +63,7 @@ export default function ThreeDProduct() {
                                 href="/Products List.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-8 py-4 bg-[#ff3333] text-white font-bold rounded-full transition-all flex items-center gap-2 group inline-flex hover:bg-white hover:text-[#ff3333] border-2 border-transparent hover:border-[#ff3333] shadow-lg hover:shadow-xl"
+                                className="px-6 py-2.5 bg-[#ff3333] text-white font-bold rounded-full transition-all flex items-center gap-2 group inline-flex hover:bg-white hover:text-[#ff3333] border-2 border-transparent hover:border-[#ff3333] shadow-lg hover:shadow-xl"
                             >
                                 View All Products
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -122,7 +122,7 @@ export default function ThreeDProduct() {
                                 href="/Products List.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-8 py-4 bg-[#ff3333] text-white font-bold rounded-full transition-all flex items-center gap-2 group inline-flex hover:bg-white hover:text-[#ff3333] border-2 border-transparent hover:border-[#ff3333] shadow-lg hover:shadow-xl"
+                                className="px-6 py-2.5 bg-[#ff3333] text-white font-bold rounded-full transition-all flex items-center gap-2 group inline-flex hover:bg-white hover:text-[#ff3333] border-2 border-transparent hover:border-[#ff3333] shadow-lg hover:shadow-xl"
                             >
                                 View All Products
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

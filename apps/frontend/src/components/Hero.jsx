@@ -36,17 +36,10 @@ export default function Hero() {
             </div>
 
             {/* Bottom Controls & Info Overlay */}
-            <div className="absolute bottom-8 md:bottom-16 left-0 w-full px-6 md:px-16 md:pr-44 flex flex-col-reverse md:flex-row items-center md:items-end justify-between z-20 gap-8 md:gap-12">
+            <div className="absolute bottom-8 md:bottom-16 left-0 w-full px-6 md:px-16 md:pr-44 flex flex-col-reverse md:flex-row items-center md:items-end justify-end z-20 gap-8 md:gap-12">
 
                 {/* Navigation Arrows */}
-                <div className="flex items-center gap-4">
-                    <button className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red transition-all group">
-                        <ArrowLeft size={20} className="md:w-6 md:h-6 group-hover:-translate-x-1 transition-transform" />
-                    </button>
-                    <button className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red transition-all group">
-                        <ArrowRight size={20} className="md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                </div>
+
 
                 {/* Right Side Info & Counter */}
                 <div className="flex flex-col items-center md:items-end text-center md:text-right">

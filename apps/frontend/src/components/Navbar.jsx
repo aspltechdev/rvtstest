@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { cn } from "@/lib/utils";
@@ -104,14 +105,15 @@ export default function Navbar() {
             <div className="max-w-[1400px] mx-auto flex items-center justify-between">
                 {/* Logo with Glow Effect */}
                 <Link href="/" className="group relative z-[6000] flex items-center gap-2">
-                    <div className="w-8 h-8 dark:bg-black bg-white rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-500">
-                        <span className="dark:text-[#ff3333] text-[#ff3333] font-black text-xs">RV</span>
+                    <div className="relative w-[100px] h-[34px] md:w-[120px] md:h-[40px]">
+                        <Image
+                            src="/assets/rvts-logo.png"
+                            alt="RVTS Logo"
+                            fill
+                            className="object-contain"
+                            priority
+                        />
                     </div>
-                    <span className={cn(
-                        "text-xl font-bold uppercase tracking-widest transition-colors duration-500 text-white"
-                    )}>
-                        RVTech
-                    </span>
                 </Link>
 
                 {/* Desktop Menu - High End Navigation */}

@@ -86,15 +86,16 @@ export default function Footer() {
                 </div>
 
                 {/* Links Section - Spans Full Width on Desktop */}
-                <div className="col-span-1 lg:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6 dark:border-zinc-800 border-zinc-200 border-t pt-6">
+                {/* Links Section - Spans Full Width on Desktop */}
+                <div className="col-span-1 lg:col-span-2 grid grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-6 dark:border-zinc-800 border-zinc-200 border-t pt-6">
                     {/* Quick Links */}
-                    <div className={isVisible ? "animate-slide-up" : "opacity-0"} style={{ animationDelay: '200ms' }}>
+                    <div className={`order-1 ${isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: '200ms' }}>
                         <h4 className="font-bold text-xs uppercase tracking-wider mb-4 text-red-600 hover:text-red-500 transition-colors cursor-pointer">Quick Links</h4>
                         <ul className="space-y-2 dark:text-zinc-200 text-zinc-600 text-sm">
                             {['Home', 'About Us', 'Products', 'Services', 'Contact Us'].map((item) => (
                                 <li key={item}>
                                     <a
-                                        href={item === 'Products' ? '/products' : '#'}
+                                        href={item === 'Products' ? '/products' : (item === 'Home' ? '/' : (item === 'About Us' ? '/about' : (item === 'Services' ? '/services' : '/contact')))}
                                         onClick={item === 'Products' ? (e) => handleScrollToSection(e, 'products-showcase') : undefined}
                                         className="hover:text-red-600 transition-colors cursor-pointer"
                                     >
@@ -105,8 +106,29 @@ export default function Footer() {
                         </ul>
                     </div>
 
+                    {/* Policy Links */}
+                    <div className={`order-2 ${isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: '300ms' }}>
+                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4 text-red-600 hover:text-red-500 transition-colors cursor-pointer">Policy</h4>
+                        <ul className="space-y-2 dark:text-zinc-200 text-zinc-600 text-sm">
+                            {[
+                                { name: 'Privacy Policy', href: '/privacy-policy' },
+                                { name: 'Terms & Conditions', href: '/terms-conditions' },
+                                { name: 'Disclaimer', href: '/disclaimer' }
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <a
+                                        href={item.href}
+                                        className="hover:text-red-600 transition-colors cursor-pointer"
+                                    >
+                                        {item.name}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
                     {/* Products */}
-                    <div className={isVisible ? "animate-slide-up" : "opacity-0"} style={{ animationDelay: '400ms' }}>
+                    <div className={`order-3 ${isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: '400ms' }}>
                         <h4 className="font-bold text-xs uppercase tracking-wider mb-4 text-red-600 hover:text-red-500 transition-colors cursor-pointer">PRODUCTS</h4>
                         <ul className="space-y-2 dark:text-zinc-200 text-zinc-600 text-sm">
                             {['Displays & Video Walls', 'Control Systems', 'Video Systems', 'Touch Screen Kiosk', 'Mounting solutions'].map((item) => (
@@ -124,7 +146,7 @@ export default function Footer() {
                     </div>
 
                     {/* Contact */}
-                    <div className={isVisible ? "animate-slide-up" : "opacity-0"} style={{ animationDelay: '600ms' }}>
+                    <div className={`col-span-2 lg:col-span-2 order-5 lg:order-4 ${isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: '600ms' }}>
                         <h4 className="font-bold text-xs uppercase tracking-wider mb-4 text-red-600 hover:text-red-500 transition-colors cursor-pointer">CONTACT</h4>
                         <ul className="space-y-3 dark:text-zinc-200 text-zinc-600 text-sm">
                             <li className="flex items-start gap-3 group cursor-pointer">
@@ -148,7 +170,7 @@ export default function Footer() {
                     </div>
 
                     {/* Follow Us */}
-                    <div className={isVisible ? "animate-slide-up" : "opacity-0"} style={{ animationDelay: '800ms' }}>
+                    <div className={`order-4 lg:order-5 ${isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: '800ms' }}>
                         <h4 className="font-bold text-xs uppercase tracking-wider mb-4 text-red-600 hover:text-red-500 transition-colors cursor-pointer">Follow Us</h4>
                         <div className="grid grid-cols-2 gap-1 justify-items-center md:flex md:gap-2">
                             {[

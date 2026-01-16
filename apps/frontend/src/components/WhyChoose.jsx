@@ -111,7 +111,7 @@ export default function WhyChoose() {
                             </div>
 
                             {/* Right Image Container - Flexible Height */}
-                            <div className="relative w-full lg:w-1/2 h-[300px] lg:h-auto order-1 lg:order-2 flex">
+                            <div className="relative w-full lg:w-1/2 h-[300px] lg:h-full order-1 lg:order-2 flex">
                                 <div className="w-full h-full dark:bg-zinc-900 bg-zinc-200 rounded-[30px] rounded-tr-[80px] overflow-hidden relative dark:border-white/30 border-black/5 border flex-1">
                                     <motion.div 
                                         initial={{ scale: 1.1 }}
@@ -120,7 +120,7 @@ export default function WhyChoose() {
                                         className="relative w-full h-full"
                                     >
                                         <Image 
-                                            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+                                            src="/images/why-bg.jpg"
                                             alt="Why Choose RVTS" 
                                             fill
                                             className="object-cover transition-all duration-700"
